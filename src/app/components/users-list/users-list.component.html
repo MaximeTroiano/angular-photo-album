@@ -1,3 +1,10 @@
-<p>
-  users-list works!
-</p>
+<h3 class="page-heading">User list ({{users.length}})</h3>
+
+<div class="mg-10 list-group">
+	<a *ngFor="let user of users" 
+		href="#" 
+		class="list-group-item"
+		routerLink="{{user.id}}">
+		{{user.name}}
+	</a>
+</div>
