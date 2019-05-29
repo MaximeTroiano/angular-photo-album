@@ -1,12 +1,17 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/albums">Albums</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Photos</li>
+    </ol>
+</nav>
+
 <h3 class="page-heading">Album photos</h3>
 
-<div class="container">
-    <div class="row">
-        <div *ngFor="let photo of photos" class="col-4">
-            <figure class="col-sm figure">
-                <img src="{{photo.url}}" class="figure-img img-fluid rounded" alt="{{photo.title}}">
-                <figcaption class="figure-caption">{{photo.title}}</figcaption>
-            </figure>
-        </div>
+<div class="row">
+    <div *ngFor="let photo of photos" class="col-3">
+        <figure class="col-sm figure">
+            <img src="{{photo.url}}" class="figure-img img-fluid rounded" alt="{{photo.title}}">
+            <figcaption class="figure-caption">{{photo.title}}</figcaption>
+        </figure>
     </div>
 </div>

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-photo-album';
+
+  page = {
+      title: 'Angular Photos',
+      author: 'Maxime TROIANO'
+  }
 }

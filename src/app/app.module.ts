@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { AlbumProfileComponent } from './components/album-profile/album-profile.component';
+import { AlbumsListComponent } from './components/albums-list/albums-list.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersListComponent,
     UserProfileComponent,
-    AlbumProfileComponent
+    AlbumProfileComponent,
+    AlbumsListComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

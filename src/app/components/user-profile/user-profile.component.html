@@ -1,21 +1,26 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/users">Users</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Profile</li>
+    </ol>
+</nav>
+
 <h3 class="page-heading">User profile</h3>
 
-<div class="container">
-    <table>
-        <tr>
-            <th>Username:</th>
-            <td>{{user.username}}</td>
-        </tr>
-        <tr>
-            <th>Email:</th>
-            <td>{{user.email}}</td>
-        </tr>
-        <tr>
-            <th>Address:</th>
-            <td>{{user.address.street}}, {{user.address.city}} ({{user.address.zipcode}})</td>
-        </tr>
-    </table>
-</div>
+<table>
+    <tr>
+        <th>Username:</th>
+        <td>{{user.username}}</td>
+    </tr>
+    <tr>
+        <th>Email:</th>
+        <td>{{user.email}}</td>
+    </tr>
+    <tr>
+        <th>Address:</th>
+        <td>{{user.address.street}}, {{user.address.city}} ({{user.address.zipcode}})</td>
+    </tr>
+</table>
 
 <br/>
 

@@ -1,0 +1,12 @@
+<app-navigation></app-navigation>
+
+<h3 class="page-heading">Albums list ({{albums.length}})</h3>
+
+<div class="mg-10 list-group">
+	<a *ngFor="let album of albums" 
+		href="#" 
+		class="list-group-item"
+		routerLink="{{album.id}}">
+		{{album.title}}
+	</a>
+</div>

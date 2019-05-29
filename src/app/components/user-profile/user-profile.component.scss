@@ -1,7 +1,10 @@
 .page-heading {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.container table th {
-    width: 200px;
+table {
+    th {
+        width: 200px;
+        text-align: left;
+    }
 }
