@@ -27,9 +27,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/bootstrap.css"
             ],
-            "scripts": [],
+            "scripts": [
+                "src/assets/scripts/bootstrap.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
