@@ -9,6 +9,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { AlbumProfileComponent } from './components/album-profile/album-profile.component';
 import { AlbumsListComponent } from './components/albums-list/albums-list.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     UserProfileComponent,
     AlbumProfileComponent,
     AlbumsListComponent,
-    NavigationComponent
+    NavigationComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

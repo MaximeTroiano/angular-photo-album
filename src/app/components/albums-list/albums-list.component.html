@@ -2,6 +2,8 @@
 
 <h3 class="page-heading">Albums list ({{albums.length}})</h3>
 
+<app-loading *ngIf="loading"></app-loading>
+
 <div class="mg-10 list-group">
 	<a *ngFor="let album of albums" 
 		href="#" 

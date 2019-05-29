@@ -16,6 +16,8 @@ import { Album } from 'src/app/models/album';
 })
 export class UserProfileComponent implements OnInit {
     
+    loadingUser: boolean = true;
+    loadingAlbums: boolean = true;
     userId: number;
     user: User;
     albums: Album[];
@@ -34,13 +36,15 @@ export class UserProfileComponent implements OnInit {
 
     /** Getters */
     getUser(): void {
+        this.loadingUser = true;
         this.userService.getById(this.userId)
-            .subscribe((user) => this.user = user);
+            .subscribe((user) => { this.user = user; this.loadingUser = false; });
     }
 
     getUserAlbums(): void {
+        this.loadingAlbums = true;
         this.albumService.getByUserId(this.userId)
-            .subscribe((albums) => this.albums = albums);
+            .subscribe((albums) => { this.albums = albums; this.loadingAlbums = false; });
     }
     
 }

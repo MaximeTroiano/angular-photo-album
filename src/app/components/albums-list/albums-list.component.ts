@@ -13,6 +13,7 @@ import { Album } from 'src/app/models/album';
 })
 export class AlbumsListComponent implements OnInit {
 
+    loading: boolean = true;
     albums: Album[];
 
     constructor(private albumsService: AlbumsService) { }
@@ -23,8 +24,9 @@ export class AlbumsListComponent implements OnInit {
 
     /** Getters */
     getAlbums(): void {
+        this.loading = true;
         this.albumsService.getAll()
-            .subscribe((albums) => this.albums = albums);
+            .subscribe((albums) => { this.albums = albums; this.loading = false });
     }
 
 }

@@ -12,6 +12,7 @@ import { Photo } from 'src/app/models/photo';
 })
 export class AlbumProfileComponent implements OnInit {
     
+    loading: boolean = true;
     albumId: number;
     photos: Photo[];
 
@@ -27,8 +28,9 @@ export class AlbumProfileComponent implements OnInit {
     
     /** Getters */
     getPhotos(): void {
+        this.loading = true;
         this.photoService.getByAlbumId(this.albumId)
-            .subscribe((photos) => this.photos = photos);
+            .subscribe((photos) => { this.photos = photos; this.loading = false; });
     }
     
 }
