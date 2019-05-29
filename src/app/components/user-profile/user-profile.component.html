@@ -20,3 +20,12 @@
 <br/>
 
 <h3 class="page-heading">User albums</h3>
+
+<div class="mg-10 list-group">
+    <a *ngFor="let album of albums" 
+        href="#" 
+        class="list-group-item"
+        routerLink="/albums/{{album.id}}">
+        {{album.title}}
+    </a>
+</div>

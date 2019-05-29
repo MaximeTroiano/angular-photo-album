@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 /** Components */
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { AlbumProfileComponent } from './components/album-profile/album-profile.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'users', pathMatch: 'full' },
     { path: 'users', component: UsersListComponent},
-    { path: 'users/:id', component: UserProfileComponent}
+    { path: 'users/:id', component: UserProfileComponent},
+    { path: 'albums/:id', component: AlbumProfileComponent}
 ];
 
 @NgModule({

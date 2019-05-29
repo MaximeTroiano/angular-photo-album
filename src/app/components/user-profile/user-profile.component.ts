@@ -3,9 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 
 /** Services */
 import { UsersService } from 'src/app/services/users.service';
+import { AlbumsService } from 'src/app/services/albums.service';
 
 /** Models */
 import { User } from 'src/app/models/user';
+import { Album } from 'src/app/models/album';
 
 @Component({
     selector: 'app-user-profile',
@@ -14,21 +16,31 @@ import { User } from 'src/app/models/user';
 })
 export class UserProfileComponent implements OnInit {
     
+    userId: number;
     user: User;
+    albums: Album[];
     
     constructor(
         private route: ActivatedRoute,
-        private userService: UsersService) { }
+        private userService: UsersService,
+        private albumService: AlbumsService) { }
     
     ngOnInit() {
+        this.userId = +this.route.snapshot.paramMap.get('id');
+
         this.getUser();
+        this.getUserAlbums();
     }
 
     /** Getters */
     getUser(): void {
-        const id = +this.route.snapshot.paramMap.get('id');
-        this.userService.getById(id)
+        this.userService.getById(this.userId)
             .subscribe((user) => this.user = user);
+    }
+
+    getUserAlbums(): void {
+        this.albumService.getByUserId(this.userId)
+            .subscribe((albums) => this.albums = albums);
     }
     
 }
